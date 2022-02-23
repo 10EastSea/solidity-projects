@@ -8,6 +8,7 @@ contract AuctionContract {
     ERC20Contract private _erc20;
     ERC721Contract private _erc721;
 
+    // 컨트랙트 배포후, 각 토큰에 대해 approve 권한을 주어야 함! (교환하고자 하는 토큰의 소유주가, approve 함수를, 현 컨트랙트 주소로, 호출해야 함)
     constructor(address erc20, address erc721) { // 토큰 instance 설정
         _erc20 = ERC20Contract(erc20);
         _erc721 = ERC721Contract(erc721);
